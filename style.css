@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+@media screen and (min-width: 0px) {
+    body {
+        margin: 0px;
+    }
+    :root {
+        --green: #2ecc71;
+    }
+    ::placeholder {
+        color: rgba(9,25,41,255);
+    }
+    .sign-up-container {
+        background-color: #e9e9e9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+    .sign-up-logo {
+        padding: 10px 0 10px 0;
+    }
+    .sign-up-logo a img {
+        width: 200px;
+        height: auto;
+        border-radius: 50%;
+    }
+    .sign-up-box {
+        width: 320px;
+        height: 500px;
+        border: 3px solid rgba(154,134,2,255); 
+        border-radius: 10%;
+        background-color: rgba(9,25,41,255);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    .sign-up-box form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .input-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 250px;
+    }
+    .sign-up-box-row {
+        text-align: center;
+        margin-bottom: 2px;
+    }
+    .small {
+        margin-top: 2px;
+        /* display: hidden; */
+        font-size: 12px;
+        color: white;
+
+    }
+    #sign-up-box-row-1 {
+        margin-top: 15px;
+    }
+    .sign-up-box-row label{
+        font-family: 'Cinzel';
+        color: white;
+        font-size: 16px;
+        margin-top: 5px;
+    }
+    .sign-up-box input {
+        width: 200px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        height: 20px;
+    }
+    .success {
+        background-color: var(--green);
+        border: 3px solid darkgreen;
+    }
+    .error {
+        background-color: #ff9999;
+        border: 3px solid red;
+    }
+    .fa-circle-check {
+        color: var(--green);
+        display: none;
+    }
+    .fa-circle-exclamation {
+        display: none;
+        color: red;
+
+    }
+    .fa-solid {
+        position: absolute;
+        right: 0px;
+        transform: translateY(5px);
+        top: auto;
+        bottom: auto;
+    }
+    .small {
+        display: none;
+    }
+    .sign-up-box button {
+        margin: 10px 0px 10px 0px;
+        width: 200px;
+        height: 35px;
+        background-color: white;
+        border-radius: 10px;
+        font-family: 'Cinzel';
+        position: absolute;
+        bottom: 150px;
+        margin-top: 10px;
+    }
+
+    .sign-up-box button:hover {
+        cursor: pointer;
+        background-color: rgba(9,25,41,255);
+        color: white;
+        border: 1px solid white;
+    
+    }
+    .sign-up-box-terms-of-use {
+        color: white;
+        font-family: 'Cinzel';
+        font-size: 12px;
+        width: 90%;
+        margin: 5px 0px 0px 0px;
+        text-align: center;
+        border-bottom: 1px solid #e9e9e9;
+        padding-bottom: 5px;
+        position: absolute;
+        bottom: 75px;
+    }
+    .sign-up-box-terms-of-use a{
+        color: rgba(154,134,2,255);
+        font-family: 'Cinzel';
+        font-size: 12px;
+        text-decoration: none;
+    }
+    .already-have-an-account {
+        color: white;
+        font-family: 'Cinzel';
+        font-size: 14px;
+        width: 90%;
+        margin-top: 30px;
+        position: absolute;
+        bottom: 25px;
+    }
+    .already-have-an-account a{
+        margin-left: 10px;
+        text-decoration: none;
+        font-family: Cinzel;
+        font-size: 14px;
+        width: 90%;
+        color: rgba(154,134,2,255);
+    }
+    
+
+}

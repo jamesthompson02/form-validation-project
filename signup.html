@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="text/javascript" defer></script>
+    <title>Create an Account</title>  
+</head>
+<body>
+    <div class="sign-up-container">
+        <div class="sign-up-logo">
+            <a href="index.html"><img src="images/Logo.jpg" alt="Imperium Learning Logo"></a>
+        </div>
+        <div class="sign-up-box" id="sign-up-box">
+            <form id="form">
+                <div class="sign-up-box-row" id="sign-up-box-row-1">
+                    <label for="full_name">Full Name</label><br>
+                    <div class="input-container">
+                        <input type="text" id="full_name" name="full_name"> 
+                        <div class="fa-solid fa-circle-check"></div>
+                        <div class="fa-solid fa-circle-exclamation"></div>
+                    </div>
+                    <div class="small">Error Message</div>
+                </div>
+                <div class="sign-up-box-row" id="sign-up-box-row-2">
+                    <label for="email_address">Email Address</label><br>
+                    <div class="input-container">
+                        <input type="email" id="email_address" name="email_address">
+                        <div class="fa-solid fa-circle-check"></div>
+                        <div class="fa-solid fa-circle-exclamation"></div>
+                    </div>
+                    <div class="small">Error Message</div>
+                </div>
+                <div class="sign-up-box-row" id="sign-up-box-row-3">
+                    <label for="confirm_email_address">Confirm Email Address</label><br>
+                    <div class="input-container">
+                        <input type="email" id="confirm_email_address" name="confirm_email_address">
+                        <div class="fa-solid fa-circle-check"></div>
+                        <div class="fa-solid fa-circle-exclamation"></div>
+                    </div>    
+                    <div class="small">Error Message</div>
+                </div>
+                <div class="sign-up-box-row" id="sign-up-box-row-4">
+                    <label for="password">Password</label><br>
+                    <div class="input-container">
+                        <input type="password" id="password" name="password">
+                        <div class="fa-solid fa-circle-check"></div>
+                        <div class="fa-solid fa-circle-exclamation"></div>
+                    </div>
+                    <div class="small">Error Message</div>
+                </div>
+                <div class="sign-up-box-row" id="sign-up-box-row-5">
+                    <label for="confirm_password">Confirm Password</label><br>
+                    <div class="input-container">
+                        <input type="password" id="confirm_password" name="confirm_password">
+                        <div class="fa-solid fa-circle-check"></div>
+                        <div class="fa-solid fa-circle-exclamation"></div>
+                    </div>                  
+                    <div class="small">Error Message</div>
+                </div>
+                <button id="submit-btn"><strong>Create Account</strong></button>
+                <div class="sign-up-box-terms-of-use">
+                    By creating an account you agree to Imperium Learning's <a href="#">Terms and Conditions</a>. Please see our <a href="#">Privacy Notice</a>, our <a href="#">Cookies Notice</a> and our <a href="#">Interest-Based Ads Notice</a>.
+                </div>
+                <div class="already-have-an-account">
+                    Already have an account? <a href="#">Sign in</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
