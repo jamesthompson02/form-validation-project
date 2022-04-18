@@ -19,8 +19,8 @@ const capital_validation = /[A-Z]/
 const lower_validation = /[a-z]/
 const special_validation = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/
 const number_validation = /[0-9]/
-
-
+const dot_validation = /\./
+const space_validation = /\ /
 
 
 function regExName(x) {
@@ -51,6 +51,36 @@ function regExNumber(x) {
 function eightLength(x) {
     return x.length >= 8;
 }
+
+function regExDot(x) {
+    const parameter_value = x.split('@');
+    const parameter_value2 = parameter_value[parameter_value.length - 1];
+    const number_of_dots = (parameter_value2.match(/\./g) || []).length;
+    if (dot_validation.test(parameter_value2) == true && number_of_dots == 1 && parameter_value2[parameter_value2.length - 1] != '.') {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function regExSpace(x) {
+    if (space_validation.test(x) == false) {
+        return false
+    }
+    const test_string = x;
+    let test_string2 = test_string.split(' ');
+    test_string2 = test_string2.filter(word => word !== '');
+    if (test_string2.length < 2) {
+        return false;
+    }
+    test_string2 = test_string2.filter(word => capital_validation.test(word[0]));
+    if (test_string2.length < 2) {
+        return false;
+    } else {
+        return true;
+    }   
+}
+
 
 function checkInputs() {
     for (let each of inputs) {
@@ -115,8 +145,9 @@ function checkInputs() {
     }
     for (let each of inputs) {
         if (each == full_name && full_name.classList.contains('error') == false) {
-            let test_result = regExName(full_name.value);
-            if (test_result == false) {
+            let test_result1 = regExName(full_name.value);
+            let test_result2 = regExSpace(full_name.value);
+            if (test_result1 == false || test_result2 == false) {
                 full_name.classList.remove('success');
                 ticks[inputs.indexOf(full_name)].style.display = 'none';
                 full_name.classList.add('error');
@@ -126,8 +157,9 @@ function checkInputs() {
             }
         }
         if (each == email_address && email_address.classList.contains('error') == false) {
-            let test_result = regExEmail(email_address.value);
-            if (test_result == false) {
+            let test_result1 = regExEmail(email_address.value);
+            let test_result2 = regExDot(email_address.value);
+            if (test_result1 == false || test_result2 == false) {
                 email_address.classList.remove('success');
                 ticks[inputs.indexOf(email_address)].style.display = 'none';
                 email_address.classList.add('error');
@@ -137,8 +169,9 @@ function checkInputs() {
             }
         }
         if (each == confirm_email_address && confirm_email_address.classList.contains('error') == false) {
-            let test_result = regExEmail(confirm_email_address.value);
-            if (test_result == false) {
+            let test_result1 = regExEmail(confirm_email_address.value);
+            let test_result2 = regExDot(confirm_email_address.value);
+            if (test_result1 == false || test_result2 == false) {
                 confirm_email_address.classList.remove('success');
                 ticks[inputs.indexOf(confirm_email_address)].style.display = 'none';
                 confirm_email_address.classList.add('error');

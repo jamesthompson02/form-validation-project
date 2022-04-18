@@ -4,6 +4,7 @@
 @media screen and (min-width: 0px) {
     body {
         margin: 0px;
+        background-color: #e9e9e9;
     }
     :root {
         --green: #2ecc71;
@@ -108,8 +109,8 @@
         background-color: white;
         border-radius: 10px;
         font-family: 'Cinzel';
-        position: absolute;
-        bottom: 150px;
+        /* position: absolute;
+        bottom: 150px; */
         margin-top: 10px;
     }
 
@@ -129,8 +130,8 @@
         text-align: center;
         border-bottom: 1px solid #e9e9e9;
         padding-bottom: 5px;
-        position: absolute;
-        bottom: 75px;
+        /* position: absolute;
+        bottom: 75px; */
     }
     .sign-up-box-terms-of-use a{
         color: rgba(154,134,2,255);
@@ -143,9 +144,10 @@
         font-family: 'Cinzel';
         font-size: 14px;
         width: 90%;
-        margin-top: 30px;
-        position: absolute;
-        bottom: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        /* position: absolute;
+        bottom: 25px; */
     }
     .already-have-an-account a{
         margin-left: 10px;
