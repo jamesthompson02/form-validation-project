@@ -56,7 +56,7 @@ function regExDot(x) {
     const parameter_value = x.split('@');
     const parameter_value2 = parameter_value[parameter_value.length - 1];
     const number_of_dots = (parameter_value2.match(/\./g) || []).length;
-    if (dot_validation.test(parameter_value2) == true && number_of_dots == 1 && parameter_value2[parameter_value2.length - 1] != '.') {
+    if (dot_validation.test(parameter_value2) == true && number_of_dots >= 1 && parameter_value2[parameter_value2.length - 1] != '.') {
         return true;
     } else {
         return false;
